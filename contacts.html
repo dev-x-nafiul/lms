@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>NH BARBER</title>
+        <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
+        <link rel="stylesheet preload" as="style" href="css/icomoon.css" />
+        <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
+
+        <link rel="stylesheet" href="css/contacts.min.css" />
+    </head>
+    <body>
+        <header class="header" data-page="contacts">
+            <div class="container-fluid container-lg d-flex flex-wrap align-items-center justify-content-between">
+                <<a class="brand-logo d-flex align-items-center header_logo" href="index.html">
+                    <img style="height: 75px;width: 75px;" src="img/logo.png">
+                <span class="brand-logo_name">NH BARBER</span>
+                </a>
+                <nav class="header_nav">
+                    <ul class="header_nav-list">
+                        <li class="header_nav-list_item nav-item" data-page="home">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="header_nav-list_item nav-item" data-page="about">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="header_nav-list_item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Service</a>
+                            <ul class="dropdown-menu">
+                                <li class="list-item nav-item" data-page="services">
+                                    <a class="dropdown-item" href="services.html">Services</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_nav-list_item nav-item" data-page="contacts">
+                            <a class="nav-link" href="contacts.html">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header_btn btn theme-element" href="#">Book now</a>
+                <span class="header_trigger d-inline-flex d-lg-none flex-column justify-content-between">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </div>
+        </header>
+        <!-- Contacts content start -->
+        <main>
+            <section class="contacts section">
+                <div class="container">
+                    <div class="contacts_header section_header">
+                        <h2 class="contacts_header-title section_header-title" data-aos="fade-right">Let’s talk or book now</h2>
+                        <span
+                            class="contacts_header-subtitle section_header-subtitle"
+                            data-aos="fade-right"
+                            data-aos-delay="50"
+                            data-aos-once="false"
+                            >Contacts</span
+                        >
+                    </div>
+                    <div class="contacts_main d-flex flex-column flex-lg-row justify-content-between">
+                        <ul class="contacts_main-data">
+                            <li class="contacts_main-data_item">
+                                <h3 class="title">Email</h3>
+                                <a class="data link link--underline" href="mailto:#">nhbarber@support.com</a>
+                            </li>
+                            <li class="contacts_main-data_item">
+                                <h3 class="title">Address</h3>
+                                <span class="data">1900 Ranchview Dr. Richardson, <span class="linebreak">California 59700</span></span>
+                            </li>
+                            <li class="contacts_main-data_item contacts_main-data_item--tel">
+                                <h3 class="title">Phone</h3>
+                                <div class="wrapper d-flex flex-column flex-md-row">
+                                    <a class="data link link--underline" href="tel:#">+1 625 758 999</a>
+                                    <a class="data link link--underline" href="tel:#">+1 222 777 888</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form
+                            class="contacts_main-form d-flex flex-column flex-md-row flex-wrap justify-content-between col-lg-8"
+                            action="form.php"
+                            method="post"
+                            data-type="feedback"
+                            autocomplete="off"
+                        >
+                            <div class="form-block">
+                                <label class="contacts_main-form_label" for="contactsName">Name and surname *</label>
+                                <input
+                                    class="field field--corner required"
+                                    type="text"
+                                    id="contactsName"
+                                    name="contactsName"
+                                    placeholder="Your name here"
+                                />
+                            </div>
+                            <div class="form-block">
+                                <label class="contacts_main-form_label" for="contactsService">Choose a service *</label>
+                                <div class="field-wrapper_block">
+                                    <select name="contactsService" id="contactsService">
+                                        <option value="haircut" selected>Haircut</option>
+                                        <option value="dyeing">Hair dyeing</option>
+                                        <option value="trim">Beard trim</option>
+                                        <option value="stacking">Stacking</option>
+                                        <option value="shave">Shave</option>
+                                        <option value="mustache">Mustache</option>
+                                    </select>
+                                </div>
+                                <input type="hidden" id="contactsServiceValue" />
+                            </div>
+                            <div class="form-block">
+                                <label class="contacts_main-form_label" for="contactsTel">Your phone number *</label>
+                                <input
+                                    class="field field--corner required"
+                                    data-type="tel"
+                                    type="text"
+                                    name="contactsTel"
+                                    id="contactsTel"
+                                    placeholder="Your phone here"
+                                />
+                            </div>
+                            <div class="form-block">
+                                <label class="contacts_main-form_label" for="contactsDate">Choose an appointment date</label>
+                                <input
+                                    class="field field--corner optional"
+                                    data-type="date"
+                                    type="text"
+                                    id="contactsDate"
+                                    name="contactsDate"
+                                    placeholder="dd/mm/yyyy"
+                                />
+                                <input type="hidden" id="contactsDateValue" />
+                            </div>
+                            <div class="form-block">
+                                <label class="contacts_main-form_label" for="contactsMessage">Message</label>
+                                <textarea
+                                    class="field field--corner optional"
+                                    id="contactsMessage"
+                                    name="contactsMessage"
+                                    placeholder="Your message here"
+                                    data-type="message"
+                                ></textarea>
+                            </div>
+                            <button class="btn theme-element" type="submit">Book now</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <div class="maps">
+                <div id="maps">
+                    <iframe style=" width: 100%;" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6266096.259710636!2d-124.5952563472036!3d37.1602248776906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scalifornia%201900!5e1!3m2!1sen!2sbd!4v1731231927145!5m2!1sen!2sbd" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </main>
+        <!-- Contacts content end -->
+        <footer class="footer section-nopb">
+            <div class="container d-flex flex-column flex-md-row flex-md-wrap justify-content-between">
+                <div class="footer_logo footer_block col-lg-3">
+                    <a class="brand-logo d-flex align-items-center" href="index.html">
+                        <img style="height: 150px;padding: 15px; width: 150px;" src="img/logo.png"></a>
+                        <span class="brand-logo_name" style="margin-left: 12px;">NH BARBER</span>
+                    </a>
+                </div>
+                <div class="wrapper d-flex flex-column flex-md-row flex-grow-1 justify-content-lg-between">
+                    <div class="footer_contacts footer_block col-xl-4">
+                        <span class="footer_contacts-tel d-flex align-items-center">
+                            <span class="icon">
+                                <i class="icon-phone"></i>
+                            </span>
+                            <a class="link" href="tel:+#">+1 625 758 999</a>
+                        </span>
+                        <p class="footer_contacts-address">
+                            <span class="linebreak">1900 Ranchview Dr. Richardson,</span>
+                            <span class="linebreak">California 59700</span>
+                        </p>
+                        <a class="footer_contacts-mail" href="mailto:#">nhbarber@support.com</a>
+                        <ul class="footer_contacts-socials d-flex align-items-center">
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener norefferer">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener norefferer">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#" target="_blank" rel="noopener norefferer">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_newsletter footer_block">
+                        <h3 class="footer_newsletter-header">Subscribe our newsletter</h3>
+                        <p class="footer_newsletter-text text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Luctus interdum volutpat urna neque varius congue.
+                        </p>
+                        <form
+                            class="footer_newsletter-form d-flex flex-wrap flex-sm-nowrap"
+                            action="#"
+                            method="post"
+                            data-type="newsletter"
+                        >
+                            <input class="field required" data-type="email" type="text" placeholder="Your email address" />
+                            <button class="btn theme-element" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="offset col-lg-3 d-none d-lg-flex"></div>
+                <p class="footer_copyright flex-grow-1">
+                    <span class="linebreak">dev-x-nafiul &copy; NH Barber Template | All rights reserved 2024</span>
+                </p>
+            </div>
+        </footer>
+        <script src="js/common.min.js"></script>
+        <script src="js/contacts.min.js"></script>
+    </body>
+</html>
